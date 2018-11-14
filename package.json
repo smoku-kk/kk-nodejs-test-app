@@ -1,0 +1,15 @@
+{
+  "name": "hello-in-KKK-world",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Sample node.js test web app",
+  "main": "app.js",
+  "author": "KK",
+  "license": "For testing purpose only",
+  "dependencies": {
+    "express": "3.11.0",
+    "jade": "1.11.0",
+    "mocha": "1.20.1",
+    "supertest": "1.1.0"
+  }
+}
