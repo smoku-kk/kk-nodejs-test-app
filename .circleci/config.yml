@@ -9,7 +9,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:7.10
       
-    working_directory: ~/repo
+    working_directory: /src
 
     steps:
       - checkout
@@ -21,14 +21,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      - run: yarn test
+
+      - run: mocha  
 
 
