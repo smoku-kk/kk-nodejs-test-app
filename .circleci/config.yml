@@ -23,11 +23,12 @@ jobs:
 
       - run: npm install
 
+      - run: npm install mocha-junit-reporter
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: mocha  
-
-
+      - run: 
+          command: mocha test --reporter mocha-junit-reporter
