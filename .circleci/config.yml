@@ -29,7 +29,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm test
-  deployment:
+  
+  deploy:
     dockerhub:
       branch: master
       commands:
