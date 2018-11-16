@@ -11,5 +11,8 @@
     "pug": "",
     "mocha": "",
     "supertest": ""
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
