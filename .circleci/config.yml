@@ -29,10 +29,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm test
-  
-  deploy:
-    docker:
-    branches: 
-        only: master
-    steps:  
+      #trigger dockerhub build  
       - run: $DOCKER_HUB_TRIGGER
+  
