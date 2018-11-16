@@ -31,7 +31,7 @@ jobs:
       - run: npm test
   
   deploy:
-    dockerhub:
-      branch: master
+    branches: 
+        only: master
     steps:  
       - run: $DOCKER_HUB_TRIGGER
